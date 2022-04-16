@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import GetBoards from './components/getBoards/getBoards';
+import Boards from './pages/Boads';
 import { Component } from 'react';
 
 class App extends Component {
@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <div className="App">
         <main>
-          <GetBoards />
+          <Boards />
         </main>
       </div>
     );

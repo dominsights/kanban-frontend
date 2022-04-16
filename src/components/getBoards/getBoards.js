@@ -1,6 +1,6 @@
 import './getBoards.css';
 import { Component } from 'react';
-import { getBoardsApiMethod } from '../../services/getBoards/getBoards'
+import { getBoardsApiMethod } from '../../services/getBoards/api'
 
 class GetBoards extends Component {
     state = {
