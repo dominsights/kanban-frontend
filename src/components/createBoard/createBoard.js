@@ -1,6 +1,5 @@
 import './createBoard.css';
 import { Component } from 'react';
-import { createBoardApiMethod } from '../../services/createBoard/api'
 
 class CreateBoard extends Component {
     constructor(props) {
@@ -18,7 +17,7 @@ class CreateBoard extends Component {
     }
 
     handleSubmit(event) {
-        createBoardApiMethod(this.state.title)
+        this.props.createBoardApiMethod(this.state.title)
         event.preventDefault();
     }
 

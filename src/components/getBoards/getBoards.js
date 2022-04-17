@@ -1,6 +1,5 @@
 import './getBoards.css';
 import { Component } from 'react';
-import { getBoardsApiMethod } from '../../services/getBoards/api'
 
 class GetBoards extends Component {
     state = {
@@ -13,7 +12,7 @@ class GetBoards extends Component {
 
     handleGetBoards = async () => {
         try {
-            var boards = await getBoardsApiMethod();
+            var boards = await this.props.getBoardsApiMethod();
             this.setState({boards: boards})
         } catch (err) {
             console.error(err)
