@@ -1,5 +1,6 @@
 import "./createBoard.css";
 import { Component } from "react";
+import { Grid } from "@mui/material";
 
 class CreateBoard extends Component {
   constructor(props) {
@@ -23,17 +24,19 @@ class CreateBoard extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Title:
-          <input
-            type="text"
-            value={this.state.title}
-            onChange={this.handleChange}
-          />
-        </label>
-        <input type="submit" value="Create" />
-      </form>
+      <Grid container>
+        <form onSubmit={this.handleSubmit}>
+          <label>
+            Title:
+            <input
+              type="text"
+              value={this.state.title}
+              onChange={this.handleChange}
+            />
+          </label>
+          <input type="submit" value="Create" />
+        </form>
+      </Grid>
     );
   }
 }
