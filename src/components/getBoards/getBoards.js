@@ -1,6 +1,6 @@
 import "./getBoards.css";
 import { Component } from "react";
-import { Card, CardContent, Grid } from "@mui/material";
+import { Card, CardContent, Container, Grid, Typography } from "@mui/material";
 
 class GetBoards extends Component {
   state = {
@@ -22,15 +22,17 @@ class GetBoards extends Component {
 
   render() {
     return (
-      <Grid container spacing={2}>
-        {this.state.boards.map((board) => (
-          <Grid item>
-            <Card>
-              <CardContent>{board.title}</CardContent>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
+      <Container>
+        <Grid container spacing={2}>
+          {this.state.boards.map((board) => (
+            <Grid item key={board.title} xs={12} md={3}>
+              <Card elevation={1}>
+                <CardContent><Typography>{board.title}</Typography></CardContent>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
     );
   }
 }
