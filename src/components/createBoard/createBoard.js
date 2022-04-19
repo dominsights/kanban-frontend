@@ -24,19 +24,19 @@ class CreateBoard extends Component {
 
   render() {
     return (
-      <Container>
         <form onSubmit={this.handleSubmit} noValidate autoComplete="off">
+          <br/>
           <TextField
             value={this.state.title}
             onChange={this.handleChange}
             variant="outlined"
             label="Board name"
           />
+          <br />
           <Button type="submit" color="primary" variant="contained">
             Create
           </Button>
         </form>
-      </Container>
     );
   }
 }

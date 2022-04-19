@@ -22,17 +22,15 @@ class GetBoards extends Component {
 
   render() {
     return (
-      <Container>
         <Grid container spacing={2}>
           {this.state.boards.map((board) => (
-            <Grid item key={board.title} xs={12} md={3}>
+            <Grid item key={board.title}>
               <Card elevation={1}>
                 <CardContent><Typography>{board.title}</Typography></CardContent>
               </Card>
             </Grid>
           ))}
         </Grid>
-      </Container>
     );
   }
 }

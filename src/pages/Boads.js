@@ -11,11 +11,11 @@ class Boards extends Component {
     return (
       <Container>
         <Grid container>
-          <Grid item xs={12}>
-            <CreateBoard createBoardApiMethod={createBoardApiMethod} />
-          </Grid>
           <Grid item>
             <GetBoards getBoardsApiMethod={getBoardsApiMethod} />
+          </Grid>
+          <Grid item xs={12}>
+            <CreateBoard createBoardApiMethod={createBoardApiMethod} />
           </Grid>
         </Grid>
       </Container>
