@@ -1,6 +1,6 @@
 import "./createBoard.css";
 import { Component } from "react";
-import { Button, Container, TextField } from "@mui/material";
+import { Button, TextField } from "@mui/material";
 
 class CreateBoard extends Component {
   constructor(props) {
