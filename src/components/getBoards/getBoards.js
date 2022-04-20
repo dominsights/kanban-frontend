@@ -1,6 +1,7 @@
 import "./getBoards.css";
 import { Component } from "react";
 import { Card, CardContent, Container, Grid, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
 class GetBoards extends Component {
   state = {
@@ -22,15 +23,19 @@ class GetBoards extends Component {
 
   render() {
     return (
-        <Grid container spacing={2}>
-          {this.state.boards.map((board) => (
-            <Grid item key={board.title}>
+      <Grid container spacing={2}>
+        {this.state.boards.map((board) => (
+          <Grid item key={board.title}>
+            <Link to={"/board/" + board.title}>
               <Card elevation={1}>
-                <CardContent><Typography>{board.title}</Typography></CardContent>
+                <CardContent>
+                  <Typography>{board.title}</Typography>
+                </CardContent>
               </Card>
-            </Grid>
-          ))}
-        </Grid>
+            </Link>
+          </Grid>
+        ))}
+      </Grid>
     );
   }
 }
