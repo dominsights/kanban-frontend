@@ -1,6 +1,6 @@
 import "./getBoards.css";
 import { Component } from "react";
-import { Card, CardContent, Container, Grid, Typography } from "@mui/material";
+import { Card, CardContent, Grid, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
 class GetBoards extends Component {

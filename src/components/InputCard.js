@@ -1,10 +1,10 @@
 import {
   makeStyles,
-  fade,
   Paper,
   InputBase,
   Button,
   IconButton,
+  alpha
 } from "@mui/material";
 import { Clear } from "@mui/icons-material";
 import React from "react";
@@ -21,7 +21,7 @@ const useStyle = makeStyles((theme) => ({
     background: "#5AAC44",
     color: "#fff",
     "&:hover": {
-      background: fade("#5AAC44", 0.75),
+      background: alpha("#5AAC44", 0.75),
     },
   },
   confirm: {

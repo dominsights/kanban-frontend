@@ -1,14 +1,12 @@
 import "./Boards.css";
 import GetBoards from "../components/getBoards/getBoards";
-import { Component } from "react";
 import CreateBoard from "../components/createBoard/createBoard";
-import { createBoardApiMethod } from "../services/createBoard/api";
-import { getBoardsApiMethod } from "../services/getBoards/api";
+import { getBoardsApiMethod, createBoardApiMethod } from "../services/kanbanApi";
 import { Container, Grid } from "@mui/material";
+import React from "react";
 
-class Boards extends Component {
-  render() {
-    return (
+export default function Boards() {
+  return (
       <Container>
         <Grid container>
           <Grid item>
@@ -19,8 +17,5 @@ class Boards extends Component {
           </Grid>
         </Grid>
       </Container>
-    );
-  }
+  );
 }
-
-export default Boards;

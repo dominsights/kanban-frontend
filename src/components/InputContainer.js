@@ -1,4 +1,4 @@
-import { makeStyles, fade, Collapse, Paper, Typography } from "@mui/material";
+import { makeStyles, Collapse, Paper, Typography, alpha } from "@mui/material";
 import React, { useState } from "react";
 import InputCard from "./InputCard";
 
@@ -11,7 +11,7 @@ const useStyle = makeStyles((theme) => ({
     margin: theme.spacing(0, 1, 1, 1),
     background: "#EBECF0",
     "&:hover": {
-      backgroundColor: fade("#000", 0.25),
+      backgroundColor: alpha("#000", 0.25),
     },
   },
 }));
